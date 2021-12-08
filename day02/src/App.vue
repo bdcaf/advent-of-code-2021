@@ -7,6 +7,7 @@
 
         <button v-on:click="parse">Click to run</button>
         <button v-on:click="reset">reset input</button>
+        <button v-on:click="stop=true">stop</button>
         <input type="checkbox" v-model="doPart2" id="do-part-2" class="form-check-input">
         <label class="form-check-label" for="do-part-2">Plot part 2</label>
       </div>
@@ -16,7 +17,7 @@
         </ul>
       <div class="wrapper">
       <div class="day2-plot">
-        <svg v-bind:viewBox="viewBox" class="chart" width="100%" height="100%">
+        <svg v-bind:viewBox="viewBox" height="100%" width="100%" preserveAspectRatio="none" >
           <polyline
             fill="none"
             stroke="#0074d9"
@@ -63,6 +64,7 @@ export default {
     inputText:defaultInput,
     position:0,
     doPart2:false,
+    stop:false,
   } },
   methods: {
     reset(){
@@ -89,6 +91,7 @@ export default {
 
     },
     resetCalc(){
+      this.stop=false
       this.position = [0,0]
       this.positionB = [0,0]
       this.svgList="0,0"
@@ -126,7 +129,7 @@ export default {
       this.answer = this.position[0] * this.position[1]
       this.answerB = this.positionB[0] * this.positionB[1]
       //this.positionList.push(this.position)
-      if (this.list.length == 0){
+      if (this.list.length == 0 || this.stop){
         this.valid = true
         clearInterval(this.interval);
       }
