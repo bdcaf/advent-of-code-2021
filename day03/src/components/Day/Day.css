@@ -1,17 +1,3 @@
-<template>
-  <Day/>
-</template>
-
-<script>
-import Day from './components/Day/Day.vue'
-export default {
-  components: {
-   Day
-  }
-}
-
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -27,4 +13,3 @@ export default {
   width: 400px;
   height: 100px;
 }
-</style>
