@@ -13,4 +13,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
 		'@astrojs/renderer-preact',
 		'@astrojs/renderer-vue',
 	],
+	buildOptions: {
+    site: 'https://bdcaf.github.io/advent-of-code-2021/',           // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  },
 });
