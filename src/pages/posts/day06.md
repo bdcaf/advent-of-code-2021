@@ -11,6 +11,7 @@ publishDate: 28 Dec 2021
 Moved the app into an [astro blog](https://astro.build/blog/introducing-astro/).
 Seems like a good way to present them.
 
+This is also the first day I needed maths to improve the performance.
 
 <Day client:visible />
 
