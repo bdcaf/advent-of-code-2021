@@ -29,6 +29,9 @@ export default {
     selected: Number,
   },
   emits:['bingo-win'],
+  mounted(){
+    this.won= false
+  },
   watch: {
     selected: function(newVal){
       if (this.won) return
@@ -48,7 +51,9 @@ export default {
       this.won = colTest || rowTest
       this.score = this.field.map((x)=>x.filter((y)=>!y.marked).map(x=>x.value).reduce((a,b)=>a+b,0)).reduce((a,b)=>a+b,0)
       this.answer = this.score*newVal
-      if (this.won) this.$emit('bingo-win', this.answer, this.position)
+      if (this.won) {
+        this.$emit('bingo-win', this.answer, this.position)
+      }
     },
   },
   }
@@ -60,6 +65,7 @@ export default {
 }
 td {
   padding: .1em;
+  text-align:right;
 }
 .won {
   font-weight: bold;

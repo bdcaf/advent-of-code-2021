@@ -27,6 +27,12 @@ export default {
       this.parse()
     },
     parse(){
+      //this.fields.forEach(x=>{ x.won=false })
+      this.valid=false
+      this.answer=NaN
+      this.answerB=false
+      this.board=NaN
+      this.boardB=NaN
       this.fields = []
       let blocks = this.inputText.split('\n\n')
       this.draws = blocks.shift().trim().split(',').map((x)=>parseInt(x,10))
@@ -48,7 +54,6 @@ export default {
           won: false,
           score: 0,
         }))
-      console.log(this.fields[0].hash)
     },
     run1(){
       clearInterval(this.interval)
@@ -68,14 +73,6 @@ export default {
       }
       this.answerB = val
       this.boardB = pos
-    },
-    resetCalc(){
-      this.part1done=false
-      this.stop=false
-      this.valid=false
-      this.parsedRows = 0
-      this.total = []
-
     },
     nextMove(){
       if ( this.draws.length == 0 || this.stop){

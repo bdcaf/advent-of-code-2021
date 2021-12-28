@@ -25,8 +25,6 @@ export default {
     resetInput(){this.input = defaultInput},
     parseInput(){
       // reset
-      this.done1=false
-      this.done2=false
       this.tableLine=0
       clearInterval(this.interval)
 
