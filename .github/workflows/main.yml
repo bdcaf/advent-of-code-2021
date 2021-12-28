@@ -35,6 +35,7 @@ jobs:
         run: |
           npm run build
           touch ./dist/.nojekyll
+          find dist -name "*.html" -type f -exec sed -e 's/href="\//href=\/advent-of-code-2021\//g' {} \;
 
       # Push to your pages repo
       - name: Push to pages repo
