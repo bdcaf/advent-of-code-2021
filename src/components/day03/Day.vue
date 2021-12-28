@@ -1,5 +1,4 @@
 <template >
-
   <div id="app">
     <label for="code">input:</label>
     <textarea id="code" v-model="inputText" rows="4" cols="14"/>
