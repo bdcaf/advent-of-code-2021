@@ -3,8 +3,9 @@ setup: |
   import Layout from '../../layouts/BlogPost.astro'
   import Cool from '../../components/Author.astro'
   import Day02 from '../../components/day02/App.vue'
-title: Day 2
+title: Day 2 - Dive
 publishDate: 05 Dec 2021
+description: SVG for visualization
 ---
 
 [Description]( https://adventofcode.com/2021/day/2 )

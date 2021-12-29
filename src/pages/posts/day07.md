@@ -2,8 +2,9 @@
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
   import Day from '../../components/day07/App.vue'
-title: Day 7
+title: Day 7 - Crabs and Whales
 publishDate: 29 Dec 2021
+description: no animation but a plot
 ---
 
 [Description]( https://adventofcode.com/2021/day/7 )
@@ -16,6 +17,8 @@ Had to study the source to figure out how to remove points from the line (you ha
 I am still not too happy with the looks.
 There really need to be labels in the plot. Also the axis gets totally messed up for the challenge input.
 But out of time for today. Will maybe come back at another challenge.
+
+btw. maths again - the fuel consumption in part 2 is the triangle number formula.
 
 <Day client:visible />
 

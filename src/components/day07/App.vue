@@ -26,7 +26,7 @@
           <Line :dataKeys="['x', 'd']"  hideDot="true" />
           <Line :dataKeys="['x', 'd2']" :lineStyle="{ stroke: '#e080ef' }"  hideDot="true"/>
         </template>
-  </Chart>
+        </Chart>
       </div>
   </div>
 </template>
