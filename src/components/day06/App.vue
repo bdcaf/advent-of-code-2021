@@ -21,10 +21,12 @@
         <li v-for="(count,index) in fish_agg" :key="index">{{ index }} : {{ count }}</li>
       </ul>
       <div v-if="fishes.length<100" style="display:flex;flex-wrap: wrap;justify-content: center;">
-        <div class="lanternfish" v-for="(fish,index) in fishes.slice(0,100)" :key="index"
-                                 :style="[fish == 0 ? {'background':'OrangeRed'}:{}]"
-                                 >
-                                 {{ fish }}
+        <div class="lanternfish" 
+             v-for="(fish,index) in fishes.slice(0,100)" 
+             :key="index"
+             :style="[fish == 0 ? {'background':'OrangeRed'}:{}]"
+             >
+             {{ fish }}
         </div>
       </div>
       <div v-else>Won't display more than 100 lanternfish</div>

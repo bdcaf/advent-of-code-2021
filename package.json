@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.4.0",
-    "astro": "^0.22.1"
+    "astro": "^0.22.1",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^8.2.0"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^2.0.1"
