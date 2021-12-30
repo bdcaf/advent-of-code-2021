@@ -128,6 +128,7 @@ export default {
     },
     run1(){
       clearInterval(this.interval)
+      this.basin.forEach(v=>v.forEach(w=>w.group=undefined))
       const dur = 600
       this.interval = setInterval( this.move1 , dur);
       this.active = this.minima
