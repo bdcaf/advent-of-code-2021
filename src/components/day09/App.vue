@@ -23,6 +23,16 @@
               >{{ cell.value }}</td>
           </tr>
         </table>
+        <div style="padding:2em">
+          counts: 
+          <ul style="display:flex;list-style:none;flex-wrap: wrap;"> 
+            <li v-for="(c,i) in counts"
+                :style=" {'color':colors[i%colors.length]}"
+                style="padding:.3em"
+                :key="i"
+                >{{c}}</li>
+          </ul>
+        </div>
       </div>
   </div>
 </template>

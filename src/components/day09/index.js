@@ -91,6 +91,7 @@ export default {
       'deeppink',
       'indigo',
     ],
+    counts:[],
   }},
   methods:{
     resetInput(){
@@ -151,6 +152,12 @@ export default {
         })
       this.active.forEach(v=>{this.basin[v.row][v.col].group =  v.group})
       this.active = newCand
+
+      this.counts = Array(this.minima.length).fill(0)
+      this.basin.forEach(v=>v.forEach(w=>{ 
+        if (w.group == undefined) return
+        this.counts[w.group]++
+      }))
 
       if (this.active.length == 0){
         clearInterval(this.interval)
