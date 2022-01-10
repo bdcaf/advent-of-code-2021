@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^2.0.1",
+    "vis-network": "^9.1.0",
     "vue3-charts": "^1.1.27"
   }
 }
