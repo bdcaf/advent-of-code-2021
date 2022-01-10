@@ -7,7 +7,7 @@ publishDate: 9 Jan 2022
 description: slow depth first 
 ---
 
-[Description]( https://adventofcode.com/2021/day/11 )
+[Description]( https://adventofcode.com/2021/day/12 )
 
 Had problems with the visualization there - used vis.js - but data updates were so slow so it wasn't really visible.
 I approached this problem as depth first traversal of the path with the specified rules, relying that the data would not include any infinite cycles.
