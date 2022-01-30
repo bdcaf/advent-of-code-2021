@@ -82,7 +82,6 @@ export default {
         .fill()
         .map(() => new Array(xmax).fill(false));
 
-      console.log(this.coords);
       this.coords.forEach((x) => {
         this.paper[x[1]][x[0]] = true;
       });
@@ -137,7 +136,6 @@ export default {
         })
         .filter((x) => !arrNew.some((y) => y[0] == x[0] && y[1] == x[1]));
       this.coords = arrNew.concat(arrRem);
-      console.log("x", arrNew, arrRem, this.coords);
     },
   },
 };
