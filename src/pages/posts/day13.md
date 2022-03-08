@@ -7,7 +7,7 @@ publishDate: 9 Jan 2022 18:00
 description: little exercise
 ---
 
-[Description]( https://adventofcode.com/2021/day/12 )
+[Description]( https://adventofcode.com/2021/day/13 )
 
 An easy problem, just had to realize I shouldn't render the large input. Keeping just the coordinates in memory did the trick.
 
