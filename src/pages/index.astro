@@ -75,7 +75,16 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 					<p>{description}</p>
 				</section>
 				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
+					{allPosts.map((p) => {
+					if (p.day && !p.title){
+						if (p.title2 ){
+							p.title=`Day ${p.day} - ${p.title2}`
+						} else {
+							p.title=`Day ${p.day}`
+						}
+					}
+					return <BlogPostPreview post={p} />;
+					}) }
 				</section>
 			</main>
 		</div>

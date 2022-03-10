@@ -1,0 +1,30 @@
+---
+import Day from '../components/day14/App.vue';
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogPost from '../components/BlogPost.astro';
+//import { Debug } from 'astro/components';
+
+const { content } = Astro.props;
+const { title2, description, publishDate, author, heroImage, permalink, alt, day} = content;
+const title = "Day " + day + " - " + title2;
+const desc =  "https://adventofcode.com/2021/day/"+day; 
+
+---
+
+<html lang={content.lang || 'en'}>
+	<head>
+		<BaseHead {title} {description} {permalink} />
+		<link rel="stylesheet" href={Astro.resolve('../styles/blog.css')} />
+	</head>
+
+	<body>
+		<BlogHeader />
+		<div class="wrapper">
+			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+			<a href={desc}>Description</a>
+				<slot />
+			</BlogPost>
+		</div>
+	</body>
+</html>
